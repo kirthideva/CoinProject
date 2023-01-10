@@ -1,0 +1,33 @@
+<h2>Coins</h2>
+<form (ngSubmit)="onSubmit()" name="coinForm" [formGroup]="requiredForm" novalidate>
+
+    <div class="form-group" >
+        <label>Name :</label>
+        <input type="text" id="name" name="name"  [(ngModel)] = "coinObj.name" class="form-control"
+        formControlName="name"> 
+        <div *ngIf="requiredForm.controls['name'].invalid && requiredForm.controls['name'].touched" class="alert alert-danger">
+            <div *ngIf="requiredForm.controls['name'].errors.required">
+            Name is required.
+          </div>
+          <div *ngIf="requiredForm.controls['name'].invalid && requiredForm.controls['name'].touched">
+            Name is Not Valid. Minimum 3 characters required
+          </div>
+        </div>
+    </div>
+
+    <div>
+        <label>Coins :</label>
+        <input type="text" id="coins" name="coins"  [(ngModel)] = "coinObj.coins" class="form-control"
+        formControlName="coins">
+        <div *ngIf="requiredForm.controls['coins'].invalid && requiredForm.controls['coins'].touched" class="alert alert-danger">
+            <div *ngIf="requiredForm.controls['coins'].errors.required">
+            Coins count is required.
+          </div>
+          <div *ngIf="requiredForm.controls['coins'].invalid && requiredForm.controls['coins'].touched">
+            Coins count Not Valid.Should be greater than 0.
+          </div>
+        </div>
+    </div>
+
+    <button type="submit">Submit</button>
+</form>

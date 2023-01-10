@@ -1,0 +1,21 @@
+
+<nav class="navbar">
+    <ul class="navbar-nav">
+        <li class="navbar-item" style="width: 150px;list-style: none;">
+            <a routerLink="coinlist" routerLinkActive="active" class="nav-link">Coins List</a>
+        </li>
+        <li class="navbar-item" style="width: 150px;list-style: none;">
+            <a routerLink="create-coin" routerLinkActive="active" class="nav-link">Add Coin</a>
+        </li>
+        
+        
+    </ul>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <hr>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

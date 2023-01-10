@@ -1,0 +1,15 @@
+<h2>Summary</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Coin</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let coinitem of coinList">
+            <td> {{ coinitem.name }}</td>
+            <td> {{ coinitem.coins }}</td>
+        </tr>
+    </tbody>
+</table>
